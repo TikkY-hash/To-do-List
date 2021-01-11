@@ -1,0 +1,141 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+input {outline:none;}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body {
+    background-color: #88BCE3;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.list {
+    margin: 0 auto;
+    max-width: 400px;
+   margin-top: 50px;
+}
+.block {
+    -webkit-box-shadow: 4px 4px 11px 22px rgba(14, 15, 16, 0.2);
+    -moz-box-shadow: 4px 4px 11px 22px rgba(14, 15, 16, 0.2);
+    box-shadow: 4px 4px 11px 22px rgba(14, 15, 16, 0.2);
+}
+.p__text {
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+}
+.p__enter { 
+    font-size: 30px;
+    color: #E2EAF9;
+    font-weight: 400;
+}
+.enter__word {
+    width: 100%;
+    height: 30px;
+    padding: 20px
+}
+.new__block {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  margin-top: 8px;
+}
+.new__text {
+    padding: 20px;
+    padding-right: 180px;
+}
+.write__image {
+    height: 100%;
+    width: 45px;
+}
+.delete {
+    width: 52px;
+    height: 100%;
+    padding-right: 5px;
+}
+
+.new__block:hover {
+  transition: 0.5s;
+  background-color:#EDF1F5;
+}
